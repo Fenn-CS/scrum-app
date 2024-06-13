@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Acme Corp",
+    "description": "Leading technology company",
+    "members": [
+      {
+        "name": "John Doe",
+        "role": "Manager"
+      },
+      {
+        "name": "Jane Smith",
+        "role": "Developer"
+      }
+    ]
+  },
+  {
+    "name": "WhileSmart",
+    "description": "Software developping team",
+    "members": [
+      {
+        "name": "Robby Thomson",
+        "role": "senior software developper"
+      },
+      {
+        "name": "Johnny hallyday",
+        "role": "software intern"
+      }
+    ]
+  }
+]
