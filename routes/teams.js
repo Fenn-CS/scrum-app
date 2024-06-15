@@ -9,6 +9,14 @@ const generateUniqueId = () => {
   return 64465;
 }
 
+const authMiddleware=(req, res, next)=>{
+     if(req.user){
+      next();
+     }
+     else{
+      res.status(401).json({'error':'unauthorized'})
+     }
+}
 // Define your routes here
 router.post('/teams', (req, res) => {
   console.log("create a new team");
@@ -24,16 +32,16 @@ router.post('/teams', (req, res) => {
   res.status(201).json(newTeam);
 });
 
-router.get('/listofteams', (req, res) => {
+router.get('/listofteams', authMiddleware, (req, res) => {
   res.send(data);
 });
 
 // Define your routes here
-router.get('/teams', (req, res) => {
+router.get('/teams', authMiddleware, (req, res) => {
   res.json(data);
 });
 
-router.get('/singleteam', (req, res) => {
+router.get('/singleteam', authMiddleware,(req, res) => {
   res.send("a single team is published");
 });
 

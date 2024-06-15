@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import User from '../Models/User';
 
-dotenv.config({ path: path.resolve('.', '.env.example') });
+dotenv.config({ path: path.resolve('.', '.env') });
 
 const opts = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
