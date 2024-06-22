@@ -10,6 +10,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node --experimental-specifier-resolution=node app.js",
+    "build": "babel src --out-dir dist",
     "dev": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "openapi": "node openapi.js",
@@ -32,6 +33,9 @@
     "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
     "eslint": "^8.12.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.4",
